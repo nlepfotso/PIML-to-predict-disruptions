@@ -6,6 +6,7 @@ works (PINNs), to enhance prediction accuracy and computational efficiency in th
 text of urban transportation systems. However, the implementation of this framework
 was not without its challenges, each of which provided valuable insights into the com-
 plexities of working with large-scale, data-driven models.
+
 A major challenge encountered was ensuring consistent library versions across different
 environments. This was addressed by using a virtual environment, which effectively
 isolated the dependencies and ensured reproducibility of results. This approach proved
@@ -13,6 +14,7 @@ essential for maintaining compatibility between TensorFlow, other Python librari
 custom modules across various systems. The use of virtual environments significantly
 reduced the risk of version conflicts, ensuring that model training and inference were
 stable and reliable.
+
 Another significant hurdle was defining a custom loss function that incorporated mul-
 tiple components, including Mean Squared Error (MSE), regularization terms, and per-
 turbation factors. Crafting this custom loss function required a deep understanding of
@@ -37,6 +39,7 @@ mismatches, which were discovered during model debugging. Careful inspection of 
 model’s architecture, combined with the use of TensorFlow’s debugging tools, helped
 resolve these issues by ensuring that the input-output shapes of each layer matched the
 expected dimensions.
+
 Despite these challenges, the study demonstrated the potential of combining physics-
 based models with machine learning to predict disruptions and improve the resilience
 of transportation networks. By addressing each challenge systematically, the research
