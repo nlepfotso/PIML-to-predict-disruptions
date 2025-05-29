@@ -1,51 +1,11 @@
-This study provides a comprehensive approach to predicting disruptions in the Transport
-for London (TFL) multiplex network by integrating physics-based models with proba-
-bilistic deep learning techniques. A key takeaway from this work is the effective use of
-Physics-Informed Machine Learning (PIML), particularly Physics-Informed Neural Net-
-works (PINNs), to enhance prediction accuracy and computational efficiency in the con-
-text of urban transportation systems. However, the implementation of this framework
-was not without its challenges, each of which provided valuable insights into the com-
-plexities of working with large-scale, data-driven models.
+This study provides a comprehensive approach to predicting disruptions in the Transport for London (TFL) multiplex network by integrating physics-based models with probabilistic deep learning techniques.
+A key takeaway from this work is the effective use of Physics-Informed Machine Learning (PIML), particularly Physics-Informed Neural Networks (PINNs), to enhance prediction accuracy and computational efficiency in the context of urban transportation systems. However, the implementation of this framework was not without its challenges, each of which provided valuable insights into the complexities of working with large-scale, data-driven models.
 
-A major challenge encountered was ensuring consistent library versions across different
-environments. This was addressed by using a virtual environment, which effectively
-isolated the dependencies and ensured reproducibility of results. This approach proved
-essential for maintaining compatibility between TensorFlow, other Python libraries, and
-custom modules across various systems. The use of virtual environments significantly
-reduced the risk of version conflicts, ensuring that model training and inference were
-stable and reliable.
+A major challenge encountered was ensuring consistent library versions across different environments. This was addressed by using a virtual environment, which effectively isolated the dependencies and ensured reproducibility of results. This approach proved essential for maintaining compatibility between TensorFlow, other Python libraries, and custom modules across various systems. The use of virtual environments significantly reduced the risk of version conflicts, ensuring that model training and inference were stable and reliable.
 
-Another significant hurdle was defining a custom loss function that incorporated mul-
-tiple components, including Mean Squared Error (MSE), regularization terms, and per-
-turbation factors. Crafting this custom loss function required a deep understanding of
-the model’s goals and how each component would contribute to the overall optimiza-
-tion process. Balancing these components was complex and required iterative testing to
-ensure proper weighting of each term to avoid model overfitting or underfitting.
-Additionally, the presence of NaN values in the dataset caused model instability, lead-
-ing to divergence during training. This issue was tackled by identifying and handling the
-NaN values during the data preprocessing phase. Various strategies, including imputa-
-tion or filtering of problematic entries, were employed to ensure that the dataset was
-clean, which was essential for smooth model convergence.
-Further challenges arose from deprecated methods, leading to ‘AttributeError‘ excep-
-tions. To resolve this, the codebase was carefully reviewed, and deprecated methods 
-were replaced with their newer counterparts. This ensured compatibility with the latest 
-version of TensorFlow and prevented runtime errors during model training and evaluation.
-The initialization of the neural network was another challenge. Incorrect weight ini-
-tialization led to slow convergence and inefficient training. This issue was addressed by
-experimenting with various initialization techniques, such as Xavier and He initialization,
-to improve the model’s ability to learn efficiently from the data.
-Finally, issues with incorrect layer connections in the neural network caused shape
-mismatches, which were discovered during model debugging. Careful inspection of the
-model’s architecture, combined with the use of TensorFlow’s debugging tools, helped
-resolve these issues by ensuring that the input-output shapes of each layer matched the
-expected dimensions.
+Another significant hurdle was defining a custom loss function that incorporated multiple components, including Mean Squared Error (MSE), regularization terms, and perturbation factors. Crafting this custom loss function required a deep understanding of the model’s goals and how each component would contribute to the overall optimisation process. Balancing these components was complex and required iterative testing to ensure proper weighting of each term to avoid model overfitting or underfitting. Additionally, the presence of NaN values in the dataset caused model instability, leading to divergence during training. This issue was tackled by identifying and handling the NaN values during the data preprocessing phase. Various strategies, including imputation or filtering of problematic entries, were employed to ensure that the dataset was clean, which was essential for smooth model convergence. 
+Further challenges arose from deprecated methods, leading to ‘AttributeError‘ exceptions. To resolve this, the codebase was carefully reviewed, and deprecated methods were replaced with their newer counterparts. This ensured compatibility with the latest version of TensorFlow and prevented runtime errors during model training and evaluation.
+The initialization of the neural network was another challenge. Incorrect weight initialization led to slow convergence and inefficient training. This issue was addressed by experimenting with various initialization techniques, such as Xavier and He initialization, to improve the model’s ability to learn efficiently from the data.
+Finally, issues with incorrect layer connections in the neural network caused shape mismatches, which were discovered during model debugging. Careful inspection of the model’s architecture, combined with the use of TensorFlow’s debugging tools, helped resolve these issues by ensuring that the input-output shapes of each layer matched the expected dimensions.
 
-Despite these challenges, the study demonstrated the potential of combining physics-
-based models with machine learning to predict disruptions and improve the resilience
-of transportation networks. By addressing each challenge systematically, the research
-contributes valuable lessons for applying advanced machine learning techniques to com-
-plex, real-world systems. These findings can be extended to other urban transportation
-networks, offering a promising approach to predicting failures, optimizing performance,
-and improving overall system robustness. Future work can build on this foundation by
-refining model architectures, exploring other machine learning techniques, and applying
-the framework to different transportation systems globally.
+Despite these challenges, the study demonstrated the potential of combining physics-based models with machine learning to predict disruptions and improve the resilience of transportation networks. By addressing each challenge systematically, the research contributes valuable lessons for applying advanced machine learning techniques to complex, real-world systems. These findings can be extended to other urban transportation networks, offering a promising approach to predicting failures, optimizing performance, and improving overall system robustness. Future work can build on this foundation by refining model architectures, exploring other machine learning techniques, and applying the framework to different transportation systems globally.
